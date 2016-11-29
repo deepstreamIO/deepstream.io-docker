@@ -10,7 +10,7 @@ It can be used as a single instance or within a Deepstream cluster
 Simple usage with default config:
 
 ```
-docker run -p 6020:6020 deepstream/deepstream.io:latest
+docker run -p 6020:6020 deepstreamio/deepstream.io:latest
 ```
 
 Usage with mounted custom configuration files:
@@ -18,7 +18,7 @@ Usage with mounted custom configuration files:
 ```
 docker run -p 6020:6020 \
 -v $(pwd)/conf:/etc/deepstream \
-deepstream/deepstream.io:latest
+deepstreamio/deepstream.io:latest
 ```
 
 ## Ports
