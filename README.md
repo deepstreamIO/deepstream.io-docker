@@ -41,3 +41,13 @@ configurations, save log files or add more plugins.
 ## Pre-Installed Plugins
 
 * Winston Logger
+* Postgres Storage
+* ElasticSearch Storage
+* MongoDB Storage
+* RethinkDB Storage
+* Redis Cache
+* Hazelcast Cache
+* Memcached Cache
+* Kafka Message
+* AMQP Message
+* Redis Message
