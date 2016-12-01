@@ -9,8 +9,17 @@ RUN wget https://bintray.com/deepstreamio/rpm/rpm -O /etc/yum.repos.d/bintray-de
 
 RUN yum install -y deepstream.io-1.1.1-1
 
-# Define default command.
-CMD [ "deepstream" ]
+# Installing Plugins
+RUN deepstream install storage postgres && \
+    deepstream install storage elasticsearch && \
+    deepstream install storage mongodb && \
+    deepstream install storage rethinkdb && \
+    deepstream install cache redis && \
+    deepstream install cache hazelcast && \
+    deepstream install cache memcached && \
+    deepstream install msg kafka && \
+    deepstream install msg amqp && \
+    deepstream install msg redis
 
 # Expose ports
 
@@ -19,3 +28,6 @@ EXPOSE 6020
 
 # TCP Port
 EXPOSE 6021
+
+# Define default command.
+CMD [ "deepstream" ]
