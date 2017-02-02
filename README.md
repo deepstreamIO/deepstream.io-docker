@@ -1,9 +1,8 @@
-Deepstream.io Standalone Docker Image
+Deepstream.io Docker Image
 ---
 
 This is a standalone docker image for the deepstream.io server. 
-It can be used as a single instance or within a Deepstream cluster 
-(requires mounted connectors).
+It can be used as a single instance or within a Deepstream cluster.
 
 ## Usage
 
