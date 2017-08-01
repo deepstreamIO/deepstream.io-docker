@@ -1,7 +1,7 @@
 Deepstream.io Docker Image
 ---
 
-This is a standalone docker image for the deepstream.io server. 
+This is a standalone docker image for the deepstream.io server.
 It can be used as a single instance or within a Deepstream cluster.
 
 ## Usage
@@ -9,23 +9,21 @@ It can be used as a single instance or within a Deepstream cluster.
 Simple usage with default config:
 
 ```
-docker run -p 6020:6020 deepstreamio/deepstream.io:latest
+docker run deepstreamio/deepstream.io:latest
 ```
 
 Usage with mounted custom configuration files:
 
 ```
-docker run -p 6020:6020 \
--v $(pwd)/conf:/etc/deepstream \
-deepstreamio/deepstream.io:latest
+docker run -v $(pwd)/conf:/etc/deepstream deepstreamio/deepstream.io:latest
 ```
 
 ## Ports
 
 The image exposes the following ports:
 
-* `6020` - HTTP/Websocket Port
-* `6021` - TCP Port (only for deepstream 1.x)
+* `6020` - Websocket port
+* `8080` - HTTP port
 
 ## Folder Locations
 
@@ -47,6 +45,3 @@ configurations, save log files or add more plugins.
 * Redis Cache
 * Hazelcast Cache
 * Memcached Cache
-* Kafka Message
-* AMQP Message
-* Redis Message
