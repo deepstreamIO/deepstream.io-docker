@@ -1,4 +1,4 @@
-FROM node:8.2.1-alpine
+FROM node:8.3.0-alpine
 
 ENV DEEPSTREAM_VERSION 3.0.0
 ENV DEEPSTREAM_PATH /opt/deepstream
