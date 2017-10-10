@@ -42,6 +42,16 @@ configurations, save log files or add more plugins.
 * ElasticSearch Storage
 * MongoDB Storage
 * RethinkDB Storage
-* Redis Cache
-* Hazelcast Cache
-* Memcached Cache
+
+## How to deploy to dockerHub
+
+```
+docker login
+...
+...
+...
+cd v*.*.*
+docker build -t deepstreamio/deepstream.io:*.*.* -t deepstreamio/deepstream.io:latest .
+docker push deepstreamio/deepstream.io:*.*.*
+docker push deepstreamio/deepstream.io:latest
+```
